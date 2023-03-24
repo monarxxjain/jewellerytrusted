@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <title>Trusted Jewellery</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        /* 
+        ===============================
+        loader here------------------->
+        ===============================
+        */
+        
+
+        .big {
+            min-height: 100%;
+            background-image: url("blurredss.png");
+            backdrop-filter: blur(10px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        .loader {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
+            animation: animate 1.2s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
+        }
+
+        .loader span:nth-child(1) {
+            filter: blur(5px);
+        }
+
+        .loader span:nth-child(2) {
+            filter: blur(10px);
+        }
+
+        .loader span:nth-child(3) {
+            filter: blur(25px);
+        }
+
+        .loader span:nth-child(4) {
+            filter: blur(50px);
+        }
+
+        .loader:after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: #262626cd;
+            border: solid white 10px;
+            border-radius: 50%;
+        }
+
+
+
+        /* 
+        =============================
+        navbar here----------------> 
+        =============================
+        */
+        .navbar {
+            background-image: linear-gradient(to right, rgba(136, 3, 160), rgb(53, 7, 145));
+        }
+
+        #tj {
+            background-color: transparent;
+            font-family: MV Boli;
+            border: none;
+            border-radius: 50px;
+            text-align: center;
+            padding-left: 13px;
+            padding-right: 13px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            font-size: 25px;
+            color: white;
+            transition: background-image 0.5s;
+        }
+
+        .aboutUs {
+            margin: 0px;
+            padding: 0px;
+            background-color: white;
+            /* position: absolute;
+            top: 0px;
+            left: 0px; */
+        }
+
+
+
+        /*
+        =============================
+        footer here ---------------> 
+        =============================
+        */
+        .footer-dark {
+            padding: 10px 0;
+            padding-top: 40px;
+            color: #f0f9ff;
+            background-image: linear-gradient(to right, rgba(136, 3, 160), rgb(53, 7, 145));
+        }
+
+        .footer-dark h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .footer-dark ul {
+            padding: 0;
+            list-style: none;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .footer-dark ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.6;
+        }
+
+        .footer-dark ul a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width:767px) {
+            .footer-dark .item:not(.social) {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+        }
+
+        .footer-dark .item.text {
+            margin-bottom: 36px;
+        }
+
+        @media (max-width:767px) {
+            .footer-dark .item.text {
+                margin-bottom: 0;
+            }
+        }
+
+        .footer-dark .item.text p {
+            opacity: 0.6;
+            margin-bottom: 0;
+        }
+
+        .footer-dark .item.social {
+            text-align: center;
+        }
+
+        @media (max-width:991px) {
+            .footer-dark .item.social {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+
+        .footer-dark .item.social>a {
+            font-size: 20px;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+            margin: 0 8px;
+            color: #fff;
+            opacity: 0.75;
+        }
+
+        .footer-dark .item.social>a:hover {
+            opacity: 0.9;
+        }
+
+        .footer-dark .copyright {
+            text-align: center;
+            padding-top: 24px;
+            opacity: 0.6;
+            font-size: 17px;
+            margin-bottom: 0;
+        }
+
+        #facebook,
+        #instagram {
+            transition: transform 0.5s;
+            height: 60px;
+            width: 60px;
+            padding-top: 11px;
+        }
+
+        #facebook:hover,
+        #instagram:hover {
+            transform: scale(1.5);
+            /* background-color: #f0f9ff; */
+        }
+
+        #face,
+        #insta {
+            height: 300px;
+            width: 300px;
+        }
+
+        #categories {
+            text-decoration: none;
+        }
+        #categories:hover {
+            text-decoration: none;
+        }
+
+        #box0 {
+            font-size: 45px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            color: darkblue;
+            text-align: center;
+            border-bottom: 2px dotted darkblue;
+            transition: transform 0.3s;
+        }
+
+        #box0:hover {
+            transform: scale(1.03);
+        }
+
+
+
+        .bestSeller_TT {
+            position:absolute;
+            font-size: 17px;
+            /* top: 500px;
+            left: 500px; */
+            height: 20px;
+            background: #832729;
+            color: #fff;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.03rem;
+            padding: 0px 25px 25px 15px;
+            clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+        }
+
+        .card {
+            width: 190px;
+            height: 254px;
+            overflow: visible;
+            cursor: pointer;
+        }
+
+        .card::before,
+        .content {
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 1px #00000022;
+            transition: transform 300ms, box-shadow 200ms;
+        }
+
+        .card::before {
+            position: absolute;
+            content: ' ';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(136, 3, 160), rgb(53, 7, 145));
+            transform: rotateZ(5deg);
+            /* margin: 100px; */
+        }
+
+        .card .content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            padding: 20px;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-left: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: rotateZ(-5deg);
+            /* border: 1px solid black; */
+            box-shadow: 0px 0px 10px 2px rgb(95, 95, 95);
+            /* margin: 100px; */
+        }
+
+        .description {
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+            margin-left: 20px;
+            padding-bottom: 100px;
+        }
+
+        .info {
+            color: #00000053;
+        }
+
+        .price::before {
+            content: '₹';
+        }
+
+        .price {
+            font-weight: bold;
+            color: rgb(53, 7, 145);
+            font-size: 20px;
+            height: 30px;
+            /* margin-bottom: 10px; */
+        }
+
+        .card:hover .price{
+            background-color: rgb(243, 221, 20);
+
+        }
+
+        .description p {
+            margin-bottom: 0px;
+        }
+
+        .content .img {
+            width: 150px;
+            height: fit-content;
+        }
+
+        .card:hover::before,
+        .card:hover .content {
+            transform: rotateZ(0deg);
+        }
+
+        .card:active::before,
+        .card:active .content {
+            box-shadow: none;
+        }
+
+        #mid {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 80px;
+            padding: 70px;
+            padding-top: 50px;
+            /* background-image: linear-gradient(to right, rgba(136, 3, 160), rgb(53, 7, 145));
+            backdrop-filter: blur(5px); */
+
+            /* background-color: #202020; */
+        }
+
+        .card {
+            flex-shrink: 5;
+        }
+        .img {
+            transition: transform 0.2s;
+            margin-top: 23px;
+            margin-left: 20px;
+        }
+
+        .img:hover{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+    <div class="big" id="big">
+        <div class="loader" id="loader">
+            <span class="x"></span>
+            <span class="x"></span>
+            <span class="x"></span>
+            <span class="x"></span>
+        </div>
+    </div>
+
+    <div class="aboutUs container-fluid" style="display: none;" id="myDiv">
+        <nav class="navbar navbar-expand-lg navbar-dark pt-3 pb-3">
+            <button onclick="x()" onmouseover="y()" onmouseout="z()" id="tj">Trusted Jewels</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ml-4">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Policies.html">Policies & About Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" id="contact" href="AboutUs.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Category1.html">Earrings</a>
+                            <a class="dropdown-item" href="Category2.html">Necklace & Sets</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="others.html">Other Accessories</a>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a id="categories" href="#">Categories</a></li>   
+              <li class="breadcrumb-item active" aria-current="page">Earrings</li>
+            </ol>
+          </nav>
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Dear Customer!</strong> Currenly our main business platform is <strong>"Instagram"</strong>.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <div class="container" id="box0">
+            "To place any order, please use our <strong>Instagram ID</strong>"
+        </div>
+
+        <div id="mid">
+                
+            <div class="card" id="c1">
+                <div class="content">
+                    <div class="bestSeller_TT" >Top Seller</div>
+                    <div><img class="img" src="e1.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>AD CZ Stone Earrings
+                            </strong>
+                        </p>
+                        <p class="price">
+                            599/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c2">
+                <div class="content">
+                    <div class="bestSeller_TT" >Top Seller</div>
+                    <div><img class="img" src="e2.jpg" alt=""  height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Fusion Earrings
+                            </strong>
+                        </p>
+                        <p class="price">
+                            550/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c3">
+                <div class="content">
+                    <div class="bestSeller_TT" >Top Seller</div>
+                    <div><img class="img" src="e3.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Earrings & Studs
+
+                            </strong>
+                        </p>
+                        <p class="price">
+                            750/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c4">
+                <div class="content">
+                    <div class="bestSeller_TT" >Top Seller</div>
+                    <div><img class="img" src="e4.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Diamon Earrings
+
+                            </strong>
+                        </p>
+                        <p class="price">
+                            530/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c5">
+                <div class="content">
+                    <div class="bestSeller_TT" >Top Seller</div>
+                    <div><img class="img" src="e5.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Golden Dome Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            800/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mid">
+                
+            <div class="card" id="c1">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e6.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Silver AD Jhumka
+                            </strong>
+                        </p>
+                        <p class="price">
+                            1000/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c2">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e7.jpg" alt=""  height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>AD Earrings
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c3">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e8.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                AD CZ Stone Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            800/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c4">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e9.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Red Rose Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            1100/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c5">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e10.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Rose Gold Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            800/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mid">
+                
+            <div class="card" id="c1">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e11.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Fashionable Earrings
+
+                            </strong>
+                        </p>
+                        <p class="price">
+                            550/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c2">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e12.jpg" alt=""  height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Bettle Leaf Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c3">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e13.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Graceful Earrings
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c4">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e14.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Red & Glod Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            300/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c5">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e15.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Chandbali Earrings
+                            </strong>
+                        </p>
+                        <p class="price">
+                            300/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mid">
+                
+            <div class="card" id="c1">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e16.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Golden-blue Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            580/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c2">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e17.jpg" alt=""  height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Two Piece Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c3">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e18.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Temple Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c4">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e19.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Moti Meenakari
+                            </strong>
+                        </p>
+                        <p class="price">
+                            350/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c5">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e20.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Microplated Earring 
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mid">
+                
+            <div class="card" id="c1">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e21.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>AD Stone Jhumka
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c2">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e22.jpg" alt=""  height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Domed Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c3">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e23.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Bead-top Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c4">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e24.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Crystal Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            600/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c5">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e25.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Premium Earrings
+                            </strong>
+                        </p>
+                        <p class="price">
+                            550/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mid">
+                
+            <div class="card" id="c1">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e26.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Jaipuri Meena Earings
+
+                            </strong>
+                        </p>
+                        <p class="price">
+                            400/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c2">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e27.jpg" alt=""  height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Designer Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            300/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c3">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e28.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                White Square Earrings
+                            </strong>
+                        </p>
+                        <p class="price">
+                            300/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c4">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e29.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Earrings & tika combo
+
+                            </strong>
+                        </p>
+                        <p class="price">
+                            670/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c5">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e30.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Bead & Square Earing
+                            </strong>
+                        </p>
+                        <p class="price">
+                            290/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mid">
+                
+            <div class="card" id="c1">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e31.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Gold Tika + Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            480/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c2">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e32.jpg" alt=""  height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>Fine Tika + Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            480/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c3">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e33.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Classic Tika + Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            480/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c4">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e34.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>
+                                Chandelier Earring
+                            </strong>
+                        </p>
+                        <p class="price">
+                            375/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="c5">
+                <div class="content">
+                    <!-- <div class="bestSeller_TT" >Top Seller</div> -->
+                    <div><img class="img" src="e35.jpg" alt="" height="150px" width="150px"></div>
+                    <div class="description">
+                        <p class="title">
+                            <strong>PRIME Earrings
+                            </strong>
+                        </p>
+                        <p class="price">
+                            630/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="Policies.html">Jewellery Selling</a></li>
+                                <li><a href="Policies.html">Cash on Delivery</a></li>
+                                <li><a href="Policies.html">Online Payment</a></li>
+                                <li><a href="Policies.html">Return policy of 3 days</a></li>
+                                <li><a href="Policies.html">Free Shipping anywhere across India</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="index.html">Cheap & Beautiful jewels</a></li>
+                                <li><a href="index.html">Latest trending Collections</a></li>
+                                <li><a href="AboutUs.html">Full Customer Support</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3>Trusted Jewellery</h3>
+                            <div>Welcome to our jewellery website! We offer a wide range of unique and beautiful pieces
+                                crafted from a variety of materials. Our collection includes everything from bold
+                                statement
+                                necklaces to dainty bracelets and earrings, each one designed to add a touch of
+                                personality
+                                and flair to your outfit. Browse our selection today and find the perfect piece to
+                                express
+                                your individual style.</div>
+                        </div>
+                        <div class="col item social">
+                            <a href="https://www.facebook.com/profile.php?id=100088484834732" target="_blank" id="facebook"><i
+                                    class="icon ion-social-facebook" id="face"></i></a>
+
+                            <!-- <a href="#"><i class="icon ion-social-twitter"></i></a>
+                            <a href="#"><i class="icon ion-social-snapchat"></i></a> -->
+                            <a href="https://instagram.com/jewellerytrusted?igshid=ZDdkNTZiNTM=" target="_blank" id="instagram"><i
+                                    class="icon ion-social-instagram" id="insta"></i></a>
+                        </div>
+                        <!-- <a href="https://instagram.com/jewellerytrusted?igshid=ZDdkNTZiNTM=" id="instagram"><i class="icon bi-instagram"></i></a></div> -->
+
+                    </div>
+                    <p class="copyright">Trusted Jewellery © 2022</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 1000);
+        }
+
+        function showPage() {
+            document.getElementById("big").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+
+
+
+    <script>
+        function x() {
+            let tj = document.getElementById("tj")
+            tj.style.transform = "scale(1.1)"
+            tj.style.transition = "transform 0.3s"
+            tj.style.boxShadow = "0px 0px 20px 2px rgb(53, 7, 145)"
+            tj.style.backgroundImage = "linear-gradient(to left,rgb(137, 3, 160),rgb(53, 7, 145))"
+            setTimeout(() => {
+                tj.style.transform = "scale(1)";
+                tj.style.backgroundImage = "none"
+                tj.style.boxShadow = "none"
+            }, 1000)
+        }
+        function y() {
+            let tj = document.getElementById("tj")
+            tj.style.transform = "scale(1.1)"
+            tj.style.transition = "transform 0.3s"
+            tj.style.boxShadow = "0px 0px 20px 2px rgb(53, 7, 145)"
+            tj.style.backgroundImage = "linear-gradient(to left,rgb(137, 3, 160),rgb(53, 7, 145))"
+        }
+        function z() {
+            tj.style.transform = "scale(1)";
+            tj.style.backgroundImage = "none"
+            tj.style.boxShadow = "none"
+        }
+
+
+
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
